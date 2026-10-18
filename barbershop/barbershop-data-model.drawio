@@ -1,26 +1,128 @@
-<mxfile host="app.diagrams.net" agent="Codex">
+<mxfile host="app.diagrams.net">
   <diagram id="barbershop-data-model" name="Логическая модель данных">
     <mxGraphModel dx="2054" dy="1137" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=none;strokeColor=#000000;fontSize=13;" value="&lt;div style=&quot;font-size:16px;font-weight:bold;text-align:center;&quot;&gt;Пользователь&lt;/div&gt;&lt;hr&gt;&lt;div&gt;Идентификатор&lt;/div&gt;&lt;div&gt;Имя&lt;/div&gt;&lt;div&gt;Телефон&lt;/div&gt;&lt;div&gt;Электронная почта (необязательно)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="155" width="265" x="55" y="170" as="geometry" />
+        <mxCell id="user" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Пользователь" vertex="1">
+          <mxGeometry height="150" width="275" x="40" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="customer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=none;strokeColor=#000000;fontSize=13;" value="&lt;div style=&quot;font-size:16px;font-weight:bold;text-align:center;&quot;&gt;Клиент&lt;/div&gt;&lt;hr&gt;&lt;div&gt;Идентификатор&lt;/div&gt;&lt;div&gt;Пользователь&lt;/div&gt;" vertex="1">
-          <mxGeometry height="130" width="265" x="55" y="440" as="geometry" />
+        <mxCell id="user-field-1" parent="user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="275" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="branch" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=none;strokeColor=#000000;fontSize=13;" value="&lt;div style=&quot;font-size:16px;font-weight:bold;text-align:center;&quot;&gt;Филиал&lt;/div&gt;&lt;hr&gt;&lt;div&gt;Идентификатор&lt;/div&gt;&lt;div&gt;Название&lt;/div&gt;&lt;div&gt;Адрес&lt;/div&gt;&lt;div&gt;Контактный телефон&lt;/div&gt;&lt;div&gt;Статус&lt;/div&gt;" vertex="1">
-          <mxGeometry height="185" width="265" x="492.5" y="20" as="geometry" />
+        <mxCell id="user-field-2" parent="user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="name" vertex="1">
+          <mxGeometry height="30" width="275" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="employee" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=none;strokeColor=#000000;fontSize=13;" value="&lt;div style=&quot;font-size:16px;font-weight:bold;text-align:center;&quot;&gt;Сотрудник&lt;/div&gt;&lt;hr&gt;&lt;div&gt;Идентификатор&lt;/div&gt;&lt;div&gt;Пользователь&lt;/div&gt;&lt;div&gt;Роль: мастер / менеджер / администратор&lt;/div&gt;&lt;div&gt;Филиал (необязательно для администратора)&lt;/div&gt;&lt;div&gt;Специализация мастера (необязательно)&lt;/div&gt;&lt;div&gt;Рабочие дни мастера&lt;/div&gt;&lt;div&gt;Начало и окончание рабочего времени&lt;/div&gt;&lt;div&gt;Статус&lt;/div&gt;" vertex="1">
-          <mxGeometry height="290" width="310" x="470" y="430" as="geometry" />
+        <mxCell id="user-field-3" parent="user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="phone" vertex="1">
+          <mxGeometry height="30" width="275" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="service" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=none;strokeColor=#000000;fontSize=13;" value="&lt;div style=&quot;font-size:16px;font-weight:bold;text-align:center;&quot;&gt;Услуга&lt;/div&gt;&lt;hr&gt;&lt;div&gt;Идентификатор&lt;/div&gt;&lt;div&gt;Филиал&lt;/div&gt;&lt;div&gt;Название&lt;/div&gt;&lt;div&gt;Описание (необязательно)&lt;/div&gt;&lt;div&gt;Стоимость&lt;/div&gt;&lt;div&gt;Продолжительность&lt;/div&gt;&lt;div&gt;Статус&lt;/div&gt;" vertex="1">
-          <mxGeometry height="220" width="265" x="900" y="150" as="geometry" />
+        <mxCell id="user-field-4" parent="user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="email (необязательно)" vertex="1">
+          <mxGeometry height="30" width="275" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="appointment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=none;strokeColor=#000000;fontSize=13;" value="&lt;div style=&quot;font-size:16px;font-weight:bold;text-align:center;&quot;&gt;Запись&lt;/div&gt;&lt;hr&gt;&lt;div&gt;Идентификатор&lt;/div&gt;&lt;div&gt;Клиент&lt;/div&gt;&lt;div&gt;Мастер (сотрудник с ролью BARBER)&lt;/div&gt;&lt;div&gt;Услуга&lt;/div&gt;&lt;div&gt;Филиал&lt;/div&gt;&lt;div&gt;Дата и время начала&lt;/div&gt;&lt;div&gt;Статус&lt;/div&gt;" vertex="1">
-          <mxGeometry height="225" width="290" x="895" y="465" as="geometry" />
+        <mxCell id="customer" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Клиент" vertex="1">
+          <mxGeometry height="90" width="275" x="40" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="customer-field-1" parent="customer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="275" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="customer-field-2" parent="customer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="user_id (FK)" vertex="1">
+          <mxGeometry height="30" width="275" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="branch" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Филиал" vertex="1">
+          <mxGeometry height="180" width="285" x="500" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="branch-field-1" parent="branch" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="285" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="branch-field-2" parent="branch" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="name" vertex="1">
+          <mxGeometry height="30" width="285" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="branch-field-3" parent="branch" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="address" vertex="1">
+          <mxGeometry height="30" width="285" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="branch-field-4" parent="branch" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="phone" vertex="1">
+          <mxGeometry height="30" width="285" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="branch-field-5" parent="branch" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="status" vertex="1">
+          <mxGeometry height="30" width="285" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="employee" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Сотрудник" vertex="1">
+          <mxGeometry height="300" width="345" x="370" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-1" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="345" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-2" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="user_id (FK)" vertex="1">
+          <mxGeometry height="30" width="345" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-3" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="role: BARBER / MANAGER / ADMIN" vertex="1">
+          <mxGeometry height="30" width="345" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-4" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="branch_id (FK, необязательно для ADMIN)" vertex="1">
+          <mxGeometry height="30" width="345" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-5" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="specialization (необязательно)" vertex="1">
+          <mxGeometry height="30" width="345" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-6" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="work_days" vertex="1">
+          <mxGeometry height="30" width="345" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-7" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="work_start_time" vertex="1">
+          <mxGeometry height="30" width="345" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-8" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="work_end_time" vertex="1">
+          <mxGeometry height="30" width="345" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="employee-field-9" parent="employee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="status" vertex="1">
+          <mxGeometry height="30" width="345" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="service" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Услуга" vertex="1">
+          <mxGeometry height="240" width="285" x="900" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-1" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="285" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-2" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="branch_id (FK)" vertex="1">
+          <mxGeometry height="30" width="285" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-3" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="name" vertex="1">
+          <mxGeometry height="30" width="285" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-4" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="description (необязательно)" vertex="1">
+          <mxGeometry height="30" width="285" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-5" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="price" vertex="1">
+          <mxGeometry height="30" width="285" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-6" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="duration_minutes" vertex="1">
+          <mxGeometry height="30" width="285" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="service-field-7" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="status" vertex="1">
+          <mxGeometry height="30" width="285" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Запись" vertex="1">
+          <mxGeometry height="240" width="330" x="895" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-1" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id" vertex="1">
+          <mxGeometry height="30" width="330" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-2" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="customer_id (FK)" vertex="1">
+          <mxGeometry height="30" width="330" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-3" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="barber_id (FK)" vertex="1">
+          <mxGeometry height="30" width="330" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-4" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="service_id (FK)" vertex="1">
+          <mxGeometry height="30" width="330" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-5" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="branch_id (FK)" vertex="1">
+          <mxGeometry height="30" width="330" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-6" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="starts_at" vertex="1">
+          <mxGeometry height="30" width="330" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment-field-7" parent="appointment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="status" vertex="1">
+          <mxGeometry height="30" width="330" y="210" as="geometry" />
         </mxCell>
         <mxCell id="e-branch-employee" edge="1" parent="1" source="branch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="employee" value="1 — N&lt;br&gt;место работы">
           <mxGeometry relative="1" as="geometry" />
@@ -29,13 +131,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e-user-employee" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="employee" value="1 — 0..N&lt;br&gt;работает в филиалах">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="265" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e-user-customer" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="customer" value="1 — 0..1&lt;br&gt;связан с профилем клиента">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e-customer-appointment" edge="1" parent="1" source="customer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="appointment" value="1 — N&lt;br&gt;создаёт">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="177.5" y="970" />
+              <mxPoint x="1060" y="970" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e-employee-appointment" edge="1" parent="1" source="employee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="appointment" value="1 — N&lt;br&gt;выполняет как мастер">
           <mxGeometry relative="1" as="geometry" />
@@ -43,12 +154,14 @@
         <mxCell id="e-service-appointment" edge="1" parent="1" source="service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="appointment" value="1 — N&lt;br&gt;включена в">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-branch-appointment" edge="1" parent="1" source="branch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" target="appointment" value="1 — N&lt;br&gt;место оказания">
+        <mxCell id="e-branch-appointment" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=11;labelBackgroundColor=#ffffff;" value="1 — N&lt;br&gt;место оказания">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1270" y="112.5" />
-              <mxPoint x="1270" y="577.5" />
+              <mxPoint x="1300" y="90" />
+              <mxPoint x="1300" y="545" />
             </Array>
+            <mxPoint x="785" y="90" as="sourcePoint" />
+            <mxPoint x="1225" y="545" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
